@@ -11,8 +11,14 @@ class Parent():
 class Child(Parent):
     def __init__(self, last_name, eye_color, number_of_toys):
         print("Child Constructor Called")
+        # inherits from Parent class
         Parent.__init__(self, last_name, eye_color)
         self.number_of_toys = number_of_toys
+    # local instance method overrides inherited method when called    
+    def show_info(self):
+        print("Last Name - "+self.last_name)
+        print("Eye Color - "+self.eye_color)
+        print("Number of toys - " + str(self.number_of_toys)) 
 
 nick_m = Parent("Martinez", "brown")
 nick_m.show_info()
