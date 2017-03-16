@@ -40,6 +40,9 @@ months = ['January',
 
 # refactored with dictionary to map first three letters of each month
 # user only has to input first three letters correctly
+# list comprehensions used to create the dictionary of month abbreviations. 
+# If we were to translate this code: month_abbvs = dict((m[:3].lower(),m) for m in months) 
+# it would be: month_abbvs = {} for m in months: month_abbvs[m[:3].lower()] = m
 month_abbvs = dict((m[:3].lower(), m) for m in months)
 
 def valid_month(month):
